@@ -69,7 +69,7 @@ internal object NetworkModule {
         .build()
 
 
-    private const val BASE_URL: String = BuildConfig.BACKEND_URL
+    private const val BASE_URL: String = "https://jsonplaceholder.typicode.com"
 
     @Provides
     @Singleton

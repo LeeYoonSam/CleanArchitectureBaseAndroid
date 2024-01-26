@@ -3,9 +3,10 @@ package com.ys.base.core.network.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Post(
-    val userId: Long,
+data class Comment(
+    val postId: Long,
     val id: Long,
-    val title: String,
+    val name: String,
+    val email: String,
     val body: String,
 )
