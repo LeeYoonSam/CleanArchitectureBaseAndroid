@@ -105,7 +105,7 @@ sealed interface ApiResponse<out T> {
         }
 
         /**
-         * Operates if there is a global [ApiOperator]
+         * Operates if there is a global [BaseOperator]
          * which operates on [ApiResponse]s globally on each response and returns the target [ApiResponse].
          *
          * @return [ApiResponse] A target [ApiResponse].

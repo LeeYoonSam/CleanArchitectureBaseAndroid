@@ -560,8 +560,11 @@ public suspend inline fun <T, V> ApiResponse.Success<T>.suspendMap(
  * @return A mapped custom [T] error response model.
  */
 public fun <T> ApiResponse.Failure.Error.map(mapper: ApiErrorModelMapper<T>): T {
-    return mapper.map(this)
+    return t(mapper)
 }
+
+private fun <T> ApiResponse.Failure.Error.t(mapper: ApiErrorModelMapper<T>) =
+    mapper.map(this)
 
 /**
  * Maps [ApiResponse.Failure.Error] to a customized error response model.
