@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CleanArchitectureBase"
 include(":app")
- 
+include(":core:network")

@@ -5,8 +5,31 @@
 - [Architecture Learning Journey](https://github.com/android/nowinandroid/blob/main/docs/ArchitectureLearningJourney.md#ui-layer)
 
 # [Modularization](https://github.com/android/nowinandroid/blob/main/docs/ModularizationLearningJourney.md)
+- 모듈화를 위해 폴더를 생성하는 방법
+  - core 모듈 추가(디렉토리처럼 아무것도 없음)
+  - core 폴더 안에 network 안드로이드 모듈 추가
+    - 불필요 한 기본 파일 제거(proguard, libs 폴더 등)
+  - settings.gradle.kts 에 include 변경을 해주면 왼쪽 Project 패널에 core/network 모듈로 정상적으로 표시가 됩니다.
+
+```kotlin
+...
+include(":core:network")
+```
+
+# Kotlin
+- 1.9.22 적용
+- compose 컴파일러 버전 호환성
+```kotlin
+
+composeOptions {
+    kotlinCompilerExtensionVersion = "1.5.8"
+}
+```
+## Reference
+- [compose-compiler Repository](https://androidx.dev/storage/compose-compiler/repository)
 
 # Build
+
 
 # Testing
 
